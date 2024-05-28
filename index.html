@@ -3,28 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link
     href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
     rel="stylesheet"
   />
   <title>Abdullah's Portfolio</title>
+  <style>
+    *{
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .bg-custom {
+      background: linear-gradient(135deg, rgba(239, 246, 255, 1) 0%, rgba(215, 227, 255, 1) 100%);
+    }
+  </style>
 </head>
-<body class="font-sans bg-gray-100">
-  <!-- Navigation -->
-  <nav class="bg-gradient-to-b from-purple-800 via-purple-600 to-purple-400 p-4 fixed w-full top-0 left-0 z-10">
+<body class="font-sans bg-gray-100 ">
+  <nav class="bg-white shadow-md p-4 fixed w-full top-0 left-0 z-10">
     <div class="container mx-auto flex justify-between items-center">
-      <a href="#" class="text-white text-lg font-semibold">Muhammad Abdullah</a>
+      <a href="#" class="text-gray-800 text-lg font-semibold">Muhammad Abdullah</a>
       <!-- Navigation Links -->
       <div class="hidden md:flex space-x-4">
-        <a href="#home" class="text-white hover:underline">Home</a>
-        <a href="#about" class="text-white hover:underline">About</a>
-        <a href="#projects" class="text-white hover:underline">Projects</a>
-        <a href="#experience" class="text-white hover:underline">Experience</a>
-        <a href="#contact" class="text-white hover:underline">Contact</a>
+        <a href="#home" class="text-gray-800 hover:text-purple-600">Home</a>
+        <a href="#about" class="text-gray-800 hover:text-purple-600">About</a>
+        <a href="#projects" class="text-gray-800 hover:text-purple-600">Projects</a>
+        <a href="#experience" class="text-gray-800 hover:text-purple-600">Experience</a>
+        <a href="#contact" class="text-gray-800 hover:text-purple-600">Contact</a>
       </div>
       <!-- Mobile Menu logo -->
       <div class="md:hidden">
-        <button id="mobile-menu-toggle" class="text-white focus:outline-none">
+        <button id="mobile-menu-toggle" class="text-gray-800 focus:outline-none">
           <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
@@ -34,78 +45,85 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden z-10 fixed top-16 w-full left-0 bg-gradient-to-b from-purple-800 via-purple-600 to-purple-400 p-4 hidden">
-    <a href="#home" class="block text-white mb-2">Home</a>
-    <a href="#about" class="block text-white mb-2">About</a>
-    <a href="#projects" class="block text-white mb-2">Projects</a>
-    <a href="#experience" class="block text-white mb-2">Experience</a>
-    <a href="#contact" class="block text-white mb-2">Contact</a>
+  <div id="mobile-menu" class="md:hidden z-10 fixed top-16 w-full left-0 bg-white shadow-md p-4 hidden">
+    <a href="#home" class="block text-gray-800 mb-2">Home</a>
+    <a href="#about" class="block text-gray-800 mb-2">About</a>
+    <a href="#projects" class="block text-gray-800 mb-2">Projects</a>
+    <a href="#experience" class="block text-gray-800 mb-2">Experience</a>
+    <a href="#contact" class="block text-gray-800 mb-2">Contact</a>
   </div>
 
   <!-- Home Section -->
-  <section id="home" class="bg-cover bg-center min-h-screen flex items-center relative" style="background-image: url('./images/home-bg.jpg')">
-    <div class="text-white text-center z-10 mx-auto">
-      <h1 class="text-4xl font-bold">Muhammad Abdullah</h1>
-      <p class="text-lg font-semibold">Web Developer | Software Engineer</p>
-      <a href="mailto:homesdk25d@gmail.com" class="text-lg block text-white">Email: <span class="hover:underline">mabdullah.mcs2021@gmail.com</span></a>
-      <a href="https://github.com/mr-abd21" target="_blank" class="text-lg block text-white">Github: <span class="hover:underline">https://github.com/mr-abd21</span></a>
-      <p class="text-lg block">Phone Number: +923016777952</p>
-      <a href="./images/Resume of M Abdullah_page-0001.jpg" class="inline-block bg-blue-500 hover:bg-blue-700 text-white px-6 py-3 rounded-md mt-4 mr-4" target="_blank">Open Resume</a>
-      <a href="./images/Resume of M Abdullah.pdf" class="inline-block bg-blue-500 hover:bg-blue-700 text-white px-6 py-3 rounded-md mt-4" download>Download Resume</a>
+  <section id="home" class="min-h-screen flex items-center justify-center bg-gray-100">
+  <!-- <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 py-16"> -->
+    <div class="text-center mx-auto p-8 bg-white bg-opacity-90 rounded-lg shadow-lg max-w-3xl">
+      <h1 class="text-5xl font-bold text-gray-800">Muhammad Abdullah</h1>
+      <p class="text-2xl font-semibold text-gray-600 mt-2">Web Developer | Software Engineer</p>
+      <p class="mt-4 text-lg text-gray-700">
+        Welcome to my portfolio! I’m Muhammad Abdullah, a dedicated web developer and software engineer with a passion for creating efficient, scalable solutions. My expertise lies in front-end technologies, and I'm always exploring new advancements to stay ahead in the tech industry. Whether you're here to check out my latest projects or learn more about my skills and experience, I'm glad you stopped by!
+      </p>
+      <div class="mt-8 flex flex-col justify-center sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+        <a href="./images/Resume of M Abdullah_page-0001.jpg" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-md inline-block" target="_blank">Open Resume</a>
+        <a href="./images/Resume of M Abdullah.pdf" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-md inline-block" download>Download Resume</a>
+      </div>
+      <!-- <div class="mt-4 space-y-2">
+        <a href="mailto:mabdullah.mcs2021@gmail.com" class="text-lg text-gray-800 block">Email: <span class="text-blue-600 hover:underline">mabdullah.mcs2021@gmail.com</span></a>
+        <a href="https://github.com/mr-abd21" target="_blank" class="text-lg text-gray-800 block">Github: <span class="text-blue-600 hover:underline">https://github.com/mr-abd21</span></a>
+        <p class="text-lg text-gray-800">Phone Number: +923016777952</p>
+      </div> -->
     </div>
   </section>
+  
 
   <!-- About Section -->
-  <section id="about" class="bg-gray-200 text-gray-800 min-h-screen flex items-center">
-    <div class="container mx-auto text-center flex flex-col my-8">
-      <!-- Section 1: Introduction -->
-      <div class="bg-gradient-to-b from-purple-800 via-purple-600 to-purple-400 text-white rounded-lg p-6 mb-8 w-4/5 md:w-3/4 lg:w-4/5 xl:w-3/5 mx-auto">
-        <h2 class="text-3xl font-bold mb-4">About Me</h2>
-        <p class="text-lg">
-          Hello, I'm Muhammad Abdullah, a passionate web developer and software engineer. I love turning ideas into efficient and scalable solutions. My expertise lies in front-end technologies, and I'm constantly learning and exploring new technologies to stay up-to-date.
-        </p>
+<section id="about" class="bg-white text-gray-800 py-16">
+  <div class="container mx-auto text-center">
+    <!-- Section 1: Introduction -->
+    <div class="bg-gray-100 text-gray-800 rounded-lg p-8 mb-12 w-full md:w-3/4 lg:w-2/3 mx-auto shadow-md">
+      <h2 class="text-4xl font-bold mb-6">About Me</h2>
+      <p class="text-lg leading-relaxed">
+        Hello, I'm Muhammad Abdullah, a passionate web developer and software engineer. I love turning ideas into efficient and scalable solutions. My expertise lies in front-end technologies, and I'm constantly learning and exploring new technologies to stay up-to-date.
+      </p>
+    </div>
+
+    <!-- Section 2: Skills and Coding Image -->
+    <div class="flex flex-col md:flex-row items-center justify-center md:space-x-8">
+      <!-- Skills List -->
+      <div class="w-full md:w-1/2 lg:w-1/3 bg-gray-100 text-gray-800 rounded-lg p-8 shadow-md mb-8 md:mb-0">
+        <h3 class="text-2xl font-bold mb-4 text-center">Skills</h3>
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">HTML</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">CSS</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">JavaScript</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">Tailwind CSS</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">Bootstrap</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">React.js</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">GIT</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">C++</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">SQL</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">Java</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">DSA</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">OOP</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">Web Development Frameworks</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">Database Basics</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">Responsive Design</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">Problem Solving</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">Continuous Learning</div>
+          <div class="bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer">Communication and Collaboration</div>
+        </div>
       </div>
 
-      <!-- Section 2: Skills and Coding Image -->
-      <div class="md:w-4/5 w-4/5 mx-auto flex flex-col md:flex-row items-center justify-center my-8">
-        <!-- Skills List -->
-        <div class="w-4/5 md:w-1/2 lg:w-2/5 bg-gradient-to-b from-purple-800 via-purple-600 to-purple-400 text-white rounded-lg p-6 mr-4">
-          <h3 class="text-xl font-bold mb-2 text-center lg:text-left">Skills</h3>
-          <div class="flex flex-wrap justify-center gap-2">
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">HTML</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">CSS</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">JavaScript</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">Tailwind CSS</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">Bootstrap</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">React.js</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">GIT</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">C++</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">SQL</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">Java</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">DSA</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">OOP</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">Web Development Frameworks</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">Database Basics</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">Responsive Design</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">Problem Solving</div>
-            <!-- <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">APIs</div> -->
-            <!-- <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">Security Awareness</div> -->
-            <!-- <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">Testing</div> -->
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">Continuous Learning</div>
-            <div class="bg-white text-purple-800 px-4 py-2 rounded-lg shadow-md">Communication and Collaboration</div>
-          </div>
-        </div>
-
-        <!-- Coding Image -->
-        <div class="hidden md:block md:w-1/2 lg:w-1/2 text-white rounded-lg p-6 mt-4 md:mt-0 flex items-center justify-center">
-          <img src="./images/6502423.jpg" alt="Coding Computer" class="rounded-md shadow-md w-3/5 h-auto md:w-3/5 lg:w-3/5 xl:h-3/5" />
-        </div>
+      <!-- Coding Image -->
+      <div class="w-full md:w-1/2 lg:w-1/3 flex items-center justify-center">
+        <img src="./images/6502423.jpg" alt="Coding Computer" class="rounded-lg shadow-md w-4/5 h-auto" />
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Projects Section -->
-  <section id="projects" class="bg-gray-400 text-gray-800 min-h-screen py-16">
+  <section id="projects" class="bg-gray-100 text-gray-800 min-h-screen py-16">
     <div class="container mx-auto text-center w-4/5">
       <h2 class="text-4xl font-bold mb-8">My Projects</h2>
       <!-- Project Cards Grid -->
@@ -120,8 +138,8 @@
               <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae quia, facilis, sint, id quod tempora praesentium officiis quaerat saepe perferendis aut dicta non ipsam consequatur impedit dignissimos tenetur architecto? -->
             </p>
             <div class="mt-4">
-              <a href="https://github.com/mr-abd21/social-media-react" target="_blank" class="text-blue-500 hover:underline block">Github</a>
-              <a href="https://my-social-app-react.netlify.app/" target="_blank" class="text-blue-500 hover:underline block">Website</a>
+              <a href="https://github.com/mr-abd21/social-media-react" target="_blank" class="text-white bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Code</a>
+              <a href="https://my-social-app-react.netlify.app/" target="_blank" class="text-white bg-green-500 hover:bg-green-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Preview</a>
             </div>
           </div>
         </div>
@@ -135,8 +153,8 @@
               <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae quia, facilis, sint, id quod tempora praesentium officiis quaerat saepe perferendis aut dicta non ipsam consequatur impedit dignissimos tenetur architecto? -->
             </p>
             <div class="mt-4">
-              <a href="https://github.com/mr-abd21/Aidtech_task4" target="_blank" class="text-blue-500 hover:underline block">Github</a>
-              <a href="https://restaurant-website-html-css-1122.netlify.app/" target="_blank" class="text-blue-500 hover:underline block">Website</a>
+              <a href="https://github.com/mr-abd21/Aidtech_task4" target="_blank" class="text-white bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Code</a>
+              <a href="https://restaurant-website-html-css-1122.netlify.app/" target="_blank" class="text-white bg-green-500 hover:bg-green-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Preview</a>
             </div>
           </div>
         </div>
@@ -150,8 +168,8 @@
               <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae quia, facilis, sint, id quod tempora praesentium officiis quaerat saepe perferendis aut dicta non ipsam consequatur impedit dignissimos tenetur architecto? -->
             </p>
             <div class="mt-4">
-              <a href="https://github.com/mr-abd21/Todo-List" target="_blank" class="text-blue-500 hover:underline block">Github</a>
-              <a href="https://to-do-listt-00.netlify.app/" target="_blank" class="text-blue-500 hover:underline block">Website</a>
+              <a href="https://github.com/mr-abd21/Todo-List" target="_blank" class="text-white bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Code</a>
+              <a href="https://to-do-listt-00.netlify.app/" target="_blank" class="text-white bg-green-500 hover:bg-green-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Preview</a>
             </div>
           </div>
         </div>
@@ -165,8 +183,8 @@
               <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae quia, facilis, sint, id quod tempora praesentium officiis quaerat saepe perferendis aut dicta non ipsam consequatur impedit dignissimos tenetur architecto? -->
             </p>
             <div class="mt-4">
-              <a href="https://github.com/mr-abd21/paypal-clone" target="_blank" class="text-blue-500 hover:underline block">Github</a>
-              <a href="https://project3.com" target="_blank" class="text-blue-500 hover:underline block">Website</a>
+              <a href="https://github.com/mr-abd21/paypal-clone" target="_blank" class="text-white bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Code</a>
+              <a href="https://project3.com" target="_blank" class="text-white bg-green-500 hover:bg-green-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Preview</a>
             </div>
           </div>
         </div>
@@ -180,8 +198,8 @@
               <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae quia, facilis, sint, id quod tempora praesentium officiis quaerat saepe perferendis aut dicta non ipsam consequatur impedit dignissimos tenetur architecto? -->
             </p>
             <div class="mt-4">
-              <a href="https://github.com/mr-abd21/Aidtech_Task1" target="_blank" class="text-blue-500 hover:underline block">Github</a>
-              <a href="https://landingg-page-html-css.netlify.app/" target="_blank" class="text-blue-500 hover:underline block">Website</a>
+              <a href="https://github.com/mr-abd21/Aidtech_Task1" target="_blank" class="text-white bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Code</a>
+              <a href="https://landingg-page-html-css.netlify.app/" target="_blank" class="text-white bg-green-500 hover:bg-green-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Preview</a>
             </div>
           </div>
         </div>
@@ -195,9 +213,11 @@
               <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae quia, facilis, sint, id quod tempora praesentium officiis quaerat saepe perferendis aut dicta non ipsam consequatur impedit dignissimos tenetur architecto? -->
             </p>
             <div class="mt-4">
-              <a href="https://github.com/mr-abd21/Aidtech_task2" target="_blank" class="text-blue-500 hover:underline block">Github</a>
-              <a href="https://tempconvertot-js.netlify.app/" target="_blank" class="text-blue-500 hover:underline block">Website</a>
+              <a href="https://github.com/mr-abd21/Aidtech_task2" target="_blank" class="text-white bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Code</a>
+              <a href="https://tempconvertot-js.netlify.app/" target="_blank" class="text-white bg-green-500 hover:bg-green-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Preview</a>
             </div>
+            
+            
           </div>
         </div>
         <!-- Project Card 5 -->
@@ -206,15 +226,15 @@
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2">Calculator</h3>
             <p class="text-gray-700">
-              A simple web-based calculator application built with HTML, CSS, and JavaScript. Provides basic arithmetic operations and a user-friendly interface, making it convenient for performing calculations on-the-go. <br />
-              <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae quia, facilis, sint, id quod tempora praesentium officiis quaerat saepe perferendis aut dicta non ipsam consequatur impedit dignissimos tenetur architecto? -->
+              A simple web-based calculator application built with HTML, CSS, and JavaScript. Provides basic arithmetic operations and a user-friendly interface, making it convenient for performing calculations on-the-go.
             </p>
             <div class="mt-4">
-              <a href="https://github.com/mr-abd21/Aidtech_task3" target="_blank" class="text-blue-500 hover:underline block">Github</a>
-              <a href="https://calculator-html-csss-js.netlify.app/" target="_blank" class="text-blue-500 hover:underline block">Website</a>
+              <a href="https://github.com/mr-abd21/Aidtech_task3" target="_blank" class="text-white bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Code</a>
+              <a href="https://calculator-html-csss-js.netlify.app/" target="_blank" class="text-white bg-green-500 hover:bg-green-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Preview</a>
             </div>
           </div>
         </div>
+        
         <!-- Project Card 5 -->
         <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 cursor-pointer">
           <img src="https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg?auto=compress&cs=tinysrgb&w=600jpeg" alt="Project 3" class="w-full h-48 object-cover" />
@@ -250,12 +270,12 @@
   </section>
 
   <!-- Experience Section -->
-  <section id="experience" class="bg-gray-200 text-gray-800 min-h-screen py-16">
+  <section id="experience" class="bg-white text-gray-800 min-h-screen py-16">
     <div class="container mx-auto text-center w-4/5">
       <h2 class="text-4xl font-bold mb-8">Experience</h2>
       <div class="space-y-8">
         <!-- Experience 1 -->
-        <div class="bg-white rounded-lg p-6 shadow-lg">
+        <div class="bg-gray-100 rounded-lg p-6 shadow-lg">
           <h3 class="text-2xl font-bold mb-2">Web Intern at InfoAid Tech</h3>
           <p class="text-gray-700 mb-4">Remote | Sep - Oct 2023</p>
           <p class="text-gray-700">As a Web Intern at InfoAid Tech, I gained hands-on experience with HTML, CSS, and JavaScript while working remotely. During my internship, I contributed to various web development projects, collaborated with team members, and honed my skills in front-end development.</p>
@@ -281,7 +301,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="bg-gray-200 text-gray-800 min-h-screen flex items-center">
+  <section id="contact" class="bg-gray-100 text-gray-800 min-h-screen flex items-center">
     <div class="container mx-auto text-center flex flex-col my-8">
       <div class="w-full md:w-3/4 lg:w-2/3 mx-auto">
         <h2 class="text-4xl font-bold mb-8">Contact Me</h2>
@@ -305,11 +325,27 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-purple-800 text-white py-4">
+  <footer class="bg-gray-800 text-white py-8">
     <div class="container mx-auto text-center">
-      <p>&copy; 2024 Muhammad Abdullah. All Rights Reserved.</p>
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://github.com/mr-abd21" class="hover:text-blue-400">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://linkedin.com/in/m-abdullah-" class="hover:text-blue-400">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="tel:+923016777952" class="hover:text-blue-400">
+          <i class="fas fa-mobile-alt fa-2x"></i>
+        </a>
+        </a>
+        <a href="mailto:mabdullah.mcs2021@example.com" class="hover:text-blue-400">
+          <i class="fas fa-envelope fa-2x"></i>
+        </a>
+      </div>
+      <p>&copy; 2024 Muhammad Abdullah. All rights reserved.</p>
     </div>
   </footer>
+  
 
   <!-- JavaScript for Mobile Menu Toggle -->
   <script>
